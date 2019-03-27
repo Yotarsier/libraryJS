@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<script>
+    
+//NAMESPACE:
+var FORMULARIO 
+
+function FORMULARIO () {
+}
+FORMULARIO.prototype.addInput = function createForm (createInput){
+    //var createForm = form;
+    var form = document.getElementById("createForm").form.id;
+    document.getElementById("createInput").innerHTML = form;
+
+    return form;
+}
+
+
+function createForm (createInput){
+
+    var createForm = document.createElement("form");
+    createForm.setAttribute("input");
+   
+}
+
+
+function createInput (id, type, name, placeholder, value, required) {
+
+    var createInput = document.createElement("input");
+    createInput.setAttribute("id", id);
+    createInput.setAttribute("type", type);
+    createInput.setAttribute("name", name);
+    createInput.setAttribute("placeholder", placeholder);
+
+    var body = document.getElementsByTagName("body")[0];
+    body.appendChild(createInput);
+
+    if (typeof value !== 'undefined') {
+        createInput.setAttribute("value", value);
+    }
+    if (typeof required !== 'false') {
+        createInput.setAttribute("required", required);
+    }
+}
+
+createInput("field1", "text", "nombre", "Nombre...");
+createInput("field2", "text", "apellidos", "Apellidos...");
+createInput("field3", "number", "phone", "Teléfono...");
+createInput("field4", "text", "adress", "Dirección...")
+createInput("field5", "mail", "email", "Correo electrónico...");
+       
+createInput("butt", "button", "boton", undefined, "Enviar");
+
+</script>
+</body>
+</html>
